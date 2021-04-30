@@ -31,7 +31,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: node-app
-        path: .
+        path: ./out
 
   deploy:
     runs-on: ubuntu-latest
@@ -53,4 +53,4 @@ jobs:
         app-name: 'kurniadi'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_24d4ab05c3e843d9bada5f77a62a1fc5 }}
-        package: .
+        package: ./out
